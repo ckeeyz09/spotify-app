@@ -38,7 +38,7 @@ $(function() {
 
   $spotifySearch.on('submit', function(event){
     event.preventDefault();
-    console.log();
+    $resultsList.empty();
 
     $.get (('https://api.spotify.com/v1/search?type=track&q=' + $track.val()), function(info) {
         console.log(info);

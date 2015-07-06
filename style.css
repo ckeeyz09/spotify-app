@@ -1,14 +1,19 @@
-.track-info {
-
+html {
+}
+body {
+  background-color: rgb( 127, 185, 277);
 }
 .title {
   margin-top: 75px;
   font-size: 25px;
-  font font-weight: bolder;
+  font-weight: bold;
+  font-family: 'Rock Salt', cursive;
 }
 .artist {
   font-size: 20px;
+  font-family: 'Rock Salt', cursive;
 }
 .album {
   font-size: 20px;
+  font-family: 'Rock Salt', cursive;
 }
