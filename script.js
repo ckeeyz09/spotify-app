@@ -1,10 +1,11 @@
 $(function() {
 
-  var Results = function(track, album, artist, image) {
+  var Results = function(track, album, artist, image, music) {
     this.track = track;
     this.album = album;
     this.artist = artist;
     this.image = image;
+    this.music = music;
   }
 
   Results.all = [];
@@ -54,10 +55,9 @@ $(function() {
           var trackAlbum = track.album.name
           var trackArtist = track.artists[0].name
           var trackImage = track.album.images[1].url
-          console.log(trackTitle);
-          console.log(trackAlbum);
-          console.log(trackArtist);
-          var newResults = new Results(trackTitle, trackAlbum, trackArtist, trackImage);
+          var trackPreview = track.preview_url
+          
+          var newResults = new Results(trackTitle, trackAlbum, trackArtist, trackImage, trackPreview);
           newResults.save();
           newResults.render();
         }
