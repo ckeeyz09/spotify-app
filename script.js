@@ -43,12 +43,7 @@ $(function() {
 
     $.get (('https://api.spotify.com/v1/search?type=track&q=' + $track.val()), function(info) {
         console.log(info);
-        // var trackTitle = info.tracks.items[i].name
-        // var trackAlbum = info.tracks.items[i].album.name
-        // var trackArtist = info.tracks.items[i].artist[0].name
-        // var trackImage = info.tracks.items[i].images[1].url
-        // var template = _.template($('#track-template').html());
-
+        
         for (var i = 0; i < 20; i++) {
           var track = info.tracks.items[i];
           var trackTitle = track.name
@@ -56,7 +51,7 @@ $(function() {
           var trackArtist = track.artists[0].name
           var trackImage = track.album.images[1].url
           var trackPreview = track.preview_url
-          
+
           var newResults = new Results(trackTitle, trackAlbum, trackArtist, trackImage, trackPreview);
           newResults.save();
           newResults.render();
